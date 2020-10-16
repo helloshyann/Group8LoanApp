@@ -25,7 +25,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -35,11 +35,11 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    
+
 
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <h1>APPLICATION TITLE</h1>
+                        <h1>APPLICATION TITLE Part2</h1>
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -70,8 +70,6 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -88,11 +86,21 @@
                             <!-- Approach -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Calculate your mortgage loan</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                                    <div class="row">
+                                        <div class="col"><p>Enter total balance: </p><input type="text" placeholder="Total Balance" class="textfield" value="" id="balance" name="extra7" onkeypress="return isNumber(event)" /></div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col"><p>Enter monthly term: </p><input type="text" placeholder="Term" class="textfield" value="" id="term" name="extra7" onkeypress="return isNumber(event)" /></div>
+                                        <div class="col"><button type="button" class="btn btn-outline-danger" id="calc">Calculate</button></div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col"><p>Enter interest rate: </p><input type="text" placeholder="Interest Rate" class="textfield" value="" id="rate" name="extra7" onkeypress="return isNumber(event)" /></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -265,8 +273,10 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
+                                    <div class="chart-area" style="height: 500px; overflow: scroll;">
+                                        <table class="table table-dark table-striped" id="result">
+                                            <!-- Output will go Here! -->
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +285,6 @@
                 </div>
 
                 <!-- End of Main Content -->
-
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
@@ -290,8 +299,7 @@
             <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Page Wrapper -->      
-
+        <!-- End of Page Wrapper -->
         <!-- Logout Modal-->
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -310,6 +318,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Custom JS for App -->
+        <script src="/js/MortCalc.js"></script>
+
+        <!-- Event Listener for loan calculator  -->
+        <script>
+            document.getElementById("calc").addEventListener("click", calculate);
+        </script>
 
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
