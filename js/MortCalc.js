@@ -49,6 +49,10 @@
     };
     //Puts into HTML
     document.getElementById("result").innerHTML = template;
+    document.getElementById("termMon").innerHTML = `${term} months`
+    document.getElementById("totBal").innerHTML = `$${bal}`
+    document.getElementById("monPay").innerHTML = `$${totMonPay.toFixed(2)}`;
+    document.getElementById("intRate").innerHTML = `${rate}%`
 };
 
 // function prevents input of all letters into input field
