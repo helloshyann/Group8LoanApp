@@ -70,6 +70,7 @@
     <Content Include="css\custom.css" />
     <Content Include="css\sb-admin-2.css" />
     <Content Include="css\sb-admin-2.min.css" />
+    <Content Include="img\GROUP8FAVICON.png" />
     <Content Include="img\leeroy.jpg" />
     <Content Include="home.html" />
     <Content Include="js\demo\chart-area-demo.js" />
