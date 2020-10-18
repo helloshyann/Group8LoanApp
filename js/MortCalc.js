@@ -59,12 +59,10 @@ function calculate() {
     document.getElementById("totBal").innerHTML = `$${bal}`
     document.getElementById("monPay").innerHTML = `$${totMonPay.toFixed(2)}`;
     document.getElementById("intRate").innerHTML = `${rate}%`
-<<<<<<< Updated upstream
-=======
 
     prinGraph();
    
->>>>>>> Stashed changes
+
 };
 
 // function prevents input of all letters into input field
@@ -89,7 +87,7 @@ function prinGraph() {
             data: [dataEntries[0].toFixed(2), dataEntries[1].toFixed(2), dataEntries[2].toFixed(2), dataEntries[3].toFixed(2), dataEntries[4].toFixed(2), dataEntries[5].toFixed(2)]
         }],
         xaxis: {
-            categories: ["January", "February", "March", "April", "May", "June"]
+            categories: ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"]
         }
     }
 
