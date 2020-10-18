@@ -1,4 +1,6 @@
-﻿function calculate() {
+﻿var dataEntries = []; // Prin Payments per month (For Bar Graph)
+
+function calculate() {
     //Step 1: Getting the data
     let bal = Number(document.getElementById("balance").value); // Input 1 is total balance input
     let term = Number(document.getElementById("term").value); // Input 2 is the monthly term input
@@ -11,7 +13,7 @@
     let intPay = remBal * rate / 1200;                               //Interest Payment = Previous Remaining Balance * rate/1200
     let prinPay = totMonPay - intPay;                                // Principal Payment = Total Monthly Payment - Interest Payment
     let totIntPay = 0;                                               //Remaining Balance = Previous Remaining Balance - principal payments
-
+    let accuPay = 0;
 
     //Step 3: Result / Outputting to table
     // Base format of the Table
@@ -34,7 +36,11 @@
         prinPay = totMonPay - intPay;               //Principal will increase since interest amount owed goes down 
         remBal = remBal - prinPay;                  //Remaining balance will slowly decrease as payments are made
         intPay = remBal * rate / 1200;              //As loop continues, it gradually decreases as more payments are made
-        
+        accuPay += totMonPay;
+
+        if (i <= 6) {                               //(Bar Graph) checks for 1st 6 months and pushes principal pay into data entries variable
+            dataEntries.push(accuPay);
+        }
 
 
         //How result will be formatted as loop continues 
@@ -53,14 +59,46 @@
     document.getElementById("totBal").innerHTML = `$${bal}`
     document.getElementById("monPay").innerHTML = `$${totMonPay.toFixed(2)}`;
     document.getElementById("intRate").innerHTML = `${rate}%`
+<<<<<<< Updated upstream
+=======
+
+    prinGraph();
+   
+>>>>>>> Stashed changes
 };
 
 // function prevents input of all letters into input field
-function isNumber(evt) {            //parameter of event
-    evt = (evt) ? evt : window.event;   //evt variable = 
+function isNumber(evt) {                                     //parameter of event
+    evt = (evt) ? evt : window.event;                        //evt variable = event of the key press
     var charCode = (evt.which) ? evt.which : evt.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     }
     return true;
 };
+
+//Prints graph showing principal paid based on the first 6 months 
+function prinGraph() {
+    document.getElementById("chart").innerHTML = ``;
+    var options = {
+        chart: {
+            type: 'bar'
+        },
+        series: [{
+            name: 'Accumulated Payments',
+            data: [dataEntries[0].toFixed(2), dataEntries[1].toFixed(2), dataEntries[2].toFixed(2), dataEntries[3].toFixed(2), dataEntries[4].toFixed(2), dataEntries[5].toFixed(2)]
+        }],
+        xaxis: {
+            categories: ["January", "February", "March", "April", "May", "June"]
+        }
+    }
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+    dataEntries = [];                   // Resets array to empty 
+};
+
+//displays empty chart at the launch of the page 
+window.onload = function defaultGraph() {
+    document.getElementById("chart").innerHTML = `<br><br><br><br><br><br><br><br><br><br><br><br><br>`;
+}
