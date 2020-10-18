@@ -11,6 +11,7 @@ This program has been designed to allow a user to calculate loan estimations. Us
 ## Credits
 
 Credits to Adam Ericsson from dafont.com from providing the fonts in this application: 'Adam-Light’, 'Adam-Medium', and 'Adam-Bold'.
+
 Credits to ApexCharts for the dynamic javascript library.
 
 ## See This Website
