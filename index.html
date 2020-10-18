@@ -21,288 +21,67 @@
 
 </head>
 
-<body id="page-top">
+<body class="bg-gradient-primary">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div class="container justify-content-around">
 
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+            <div class="col-xl-7 col-lg-7 col-md-6">
 
-            <!-- Main Content -->
-            <div id="content">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <!-- Nested Row within Card Body -->
 
-
-
-                    <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <h1>Loan Calculator</h1>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-                            </a>
-
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
-
-                    <!-- ROW 1 -->
-                    <div class="row">
-
-
-                        <!-- Stat Bar Collumn -->
-                        <div class="col-lg">
-
-                            <!-- Project Card Example -->
-                            <div class="card row1Card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Account Information</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="font-weight-bold">Name: </h6>
-                                    <p class="pl-5 font-italic"><span></span>Name will display here</p>
-                                    <br />
-                                    <h6 class="font-weight-bold">Email: </h6>
-                                    <p class="pl-5 font-italic"><span></span>Email will display here</p>
-                                    <br />
-                                    <h6 class="font-weight-bold">Account Number: </h6>
-                                    <p class="pl-5 font-italic"><span></span>Account # will display here</p>
-                                    <!--<h4 class="small font-weight-bold">Active Loan: <span class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <p><span></span>Active loan will display here</p>
-                                    </div>-->
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--Written Description Column-->
-                        <div class="col-lg">
-                            <!-- Approach -->
-                            <div class="card row1Card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Loan Calculator</h6>
-                                </div>
-                                <div class="card-body text-center">
-                                    <div class="row">
-                                        <div class="col"><h6 class="font-weight-bold">Enter Loan Amount ($): </h6><input type="text" placeholder="Total Balance" class="textfield" value="" id="balance" name="extra7" onkeypress="return isNumber(event)" /></div>
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <div class="pt-5 pb-5 pr-3 pl-3">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4 name3">WELCOME BACK</h1>
                                     </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col"><h6 class="font-weight-bold">Enter Payment Term (Months): </h6><input type="text" placeholder="Term" class="textfield" value="" id="term" name="extra7" onkeypress="return isNumber(event)" /></div>
-                                    </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class="col"><h6 class="font-weight-bold">Enter Interest Rate (%): </h6><input type="text" placeholder="Interest Rate" class="textfield" value="" id="rate" name="extra7" onkeypress="return isNumber(event)" /></div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col text-center"><button type="button" class="btn btn-primary" id="calc">Calculate</button></div>
-                                    </div>
+
+                                    <form class="user">
+                                        <div class="form-group text-center">
+                                            <input type="email" id="exampleInputEmail" class="form-control form-control-user login name2" aria-describedby="emailHelp" placeholder="Email">
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="password" id="exampleInputPassword" class="form-control form-control-user login name2" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small text-center">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label name2" for="customCheck">Remember Me</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center"><button type="button" class="btn btn-primary name3 text-center" id="logBtn" onclick="goLogin();">LOGIN</button></div>
+                                        
+
+                                        <!--<a class="btn btn-primary btn-user btn-block login buttonText" onclick="goLogin();">Login</a>-->
+                                    </form>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col"></div>
 
-                        <!-- Pie Chart Collumn -->
-                        <div class="col-lg">
-                            <div class="card row1Card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Payment Progress</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div id="chart"></div>
-
-
-                            </div>
                         </div>
                     </div>
 
-                    <!-- ROW 2 -->
-                    <div class="row text-center">
-                        <div class="col">
-                            <hr />
-                            <h5 class="mb-0 font-weight-bold text-primary">Loan Overview</h5>
-                        </div>
-                    </div><hr />
-                    <div class="row mt-4">
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Term Length:</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="termMon"></span></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Loan Amount:</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="totBal"></span></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Monthly Payment:</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="monPay"></span></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-money-bill fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Interest Rate:</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="intRate"></span></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-percentage fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--ROW 3-->
-                    <div class="row">
-                        <!-- Area Chart -->
-                        <div class="col">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Monthly Payment Details</h6>
-                                    <div class="dropdown no-arrow">
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area" style="height: 500px; overflow: scroll;">
-                                        <table class="table table-light bg-light table-striped" id="result">
-                                            <!-- Output will go Here! -->
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
             </div>
-            <!-- End of Main Content -->
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Jones, Jobe, &amp; Jackson 2020</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
         </div>
     </div>
 
-    <!--Custom CS for Apex Graphs-->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <!-- Custom JS for App -->
-    <script src="js/MortCalc.js"></script>
+    <!--Custom JS for Log In-->
+    <script src="js/Login.js"></script>
 
-    <!-- Event Listener for loan calculator  -->
-    <script>
-        document.getElementById("calc").addEventListener("click", calculate);
-    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -314,10 +93,6 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-bar-demo.js"></script>
 </body>
+
 </html>

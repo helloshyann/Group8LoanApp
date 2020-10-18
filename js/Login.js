@@ -4,7 +4,7 @@
     let password = document.getElementById("exampleInputPassword").value;
 
     let accountEmail = "demo@email.com";
-    let accountPassword = "password";
+    let accountPassword = "1234";
 
     if (email == "" || password == "") {
         Swal.fire({
@@ -22,7 +22,7 @@
     }
     else {
        
-        document.location.href = "index.html";
+        document.location.href = "home.html";
     }
 
 }

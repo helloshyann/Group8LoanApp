@@ -70,8 +70,8 @@
     <Content Include="css\custom.css" />
     <Content Include="css\sb-admin-2.css" />
     <Content Include="css\sb-admin-2.min.css" />
-    <Content Include="img\undraw_posting_photo.svg" />
-    <Content Include="index.html" />
+    <Content Include="img\leeroy.jpg" />
+    <Content Include="home.html" />
     <Content Include="js\demo\chart-area-demo.js" />
     <Content Include="js\demo\chart-bar-demo.js" />
     <Content Include="js\demo\chart-pie-demo.js" />
@@ -80,7 +80,7 @@
     <Content Include="js\MortCalc.js" />
     <Content Include="js\sb-admin-2.js" />
     <Content Include="js\sb-admin-2.min.js" />
-    <Content Include="login.html" />
+    <Content Include="index.html" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.js" />
@@ -1744,6 +1744,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Font\Adam-Bold.ttf" />
+    <Content Include="Font\Adam-Light.ttf" />
+    <Content Include="Font\Adam-Medium.ttf" />
     <None Include="packages.config" />
     <Content Include="scss\navs\_global.scss" />
     <Content Include="scss\navs\_sidebar.scss" />

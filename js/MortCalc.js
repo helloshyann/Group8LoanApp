@@ -53,6 +53,7 @@ function calculate() {
         <td>${remBal.toFixed(2)}</td>
     </tr>`
     };
+
     //Puts into HTML
     document.getElementById("result").innerHTML = template;
     document.getElementById("termMon").innerHTML = `${term} months`
@@ -61,7 +62,7 @@ function calculate() {
     document.getElementById("intRate").innerHTML = `${rate}%`
 
     prinGraph();
-   
+    prinDonut();
 
 };
 
@@ -100,3 +101,31 @@ function prinGraph() {
 window.onload = function defaultGraph() {
     document.getElementById("chart").innerHTML = `<br><br><br><br><br><br><br><br><br><br><br><br><br>`;
 }
+
+
+/////////////////////////////////////////////////////////////////////
+//                         SHYANN EDITS                            //
+/////////////////////////////////////////////////////////////////////
+
+
+// Button Event
+document.getElementById('calc').addEventListener('click', function () {
+
+    let verifyBal = Number(document.getElementById('balance').value);
+    let verifyTerm = Number(document.getElementById('term').value);
+    let verifyRate = Number(document.getElementById('rate').value);
+
+
+    if (verifyBal == "" || verifyTerm == "" || verifyRate == "" ) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please fill out all selections before using the calculator.',
+        })
+    }
+    else {
+        calculate();
+        taxFunction();
+    }
+});
+

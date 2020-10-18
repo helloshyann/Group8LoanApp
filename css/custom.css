@@ -1,4 +1,42 @@
 ﻿.row1Card {
-    height: 375px!important
+    height: 350px!important
 
+}
+
+.h6 {
+    font-size: 12px;
+}
+
+
+@font-face {
+    font-family: 'Adam-Bold';
+    src: url('../Font/Adam-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Adam-Light';
+    src: url('../Font/Adam-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Adam-Medium';
+    src: url('../Font/Adam-Medium.ttf') format('truetype');
+}
+
+.name1 {
+    font-family:'Adam-Light';
+}
+
+.name2 {
+    font-family: 'Adam-Medium';
+}
+
+.name3 {
+    font-family: 'Adam-Bold';
+}
+
+buttonText {
+    font-family: 'Adam-Bold';
+    color: #fff;
 }
