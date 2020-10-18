@@ -1,4 +1,4 @@
-<img src="" width="200">
+<img src="img/logo.png" width="200">
 
 # JONES, JOBE, & JACKSON
 ## Personal Loan Lenders
