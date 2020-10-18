@@ -1,7 +1,5 @@
 <img src="img/logo.png" width="200">
-
-# JONES, JOBE, & JACKSON
-## Personal Loan Lenders
+# Personal Loan Lending Application
 
 The Jones, Jobe, & Jackson lending firm has been financing mortgage, auto, and personal loans since October 15, 2020! When it comes to getting the best rates in the country, JJ&J has you in good hands.
 
