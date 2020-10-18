@@ -73,6 +73,7 @@
     <Content Include="img\GROUP8FAVICON.png" />
     <Content Include="img\leeroy.jpg" />
     <Content Include="home.html" />
+    <Content Include="img\logo.png" />
     <Content Include="js\demo\chart-area-demo.js" />
     <Content Include="js\demo\chart-bar-demo.js" />
     <Content Include="js\demo\chart-pie-demo.js" />
