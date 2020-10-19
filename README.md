@@ -18,4 +18,4 @@ Credits to ApexCharts for the dynamic javascript library.
 
 [JONES, JOBE, & JACKSON | Loan Calculator](https://jonesjobejackson.netlify.app)
 
-© Jones, Jobe, & Jackson 2020
+© [Jones](https://www.ejdevspot.com/), [Jobe](https://shyann.netlify.app), & [Jackson](https://jackson-hollidays-portfolio.netlify.app/) 2020
