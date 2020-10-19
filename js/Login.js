@@ -22,7 +22,7 @@
     }
     else {
        
-        document.location.href = "home.html";
+        document.location.href = "leeroy-jenkins-dashboard.html";
     }
 
 }

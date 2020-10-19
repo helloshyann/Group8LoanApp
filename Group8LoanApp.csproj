@@ -72,7 +72,7 @@
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="img\group8icon.png" />
     <Content Include="img\leeroy.jpg" />
-    <Content Include="home.html" />
+    <Content Include="leeroy-jenkins-dashboard.html" />
     <Content Include="img\logo.png" />
     <Content Include="js\demo\chart-area-demo.js" />
     <Content Include="js\demo\chart-bar-demo.js" />
