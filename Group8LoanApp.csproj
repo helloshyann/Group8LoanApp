@@ -68,10 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\custom.css" />
+    <Content Include="css\prism.css" />
     <Content Include="css\sb-admin-2.css" />
     <Content Include="css\sb-admin-2.min.css" />
+    <Content Include="code.html" />
     <Content Include="img\group8icon.png" />
     <Content Include="img\leeroy.jpg" />
+    <Content Include="js\prism.js" />
     <Content Include="leeroy-jenkins-dashboard.html" />
     <Content Include="img\logo.png" />
     <Content Include="js\demo\chart-area-demo.js" />

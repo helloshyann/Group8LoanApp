@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jones, Jobe, &amp; Jackson</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/group8icon.png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gradient-primary" id="page-top">
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Topbar Search -->
+                    <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <h1><span class="name1">JONES</span><span class="name2">JOBE</span><span class="name3">&AMP;JACKSON</span></h1>
+                    </div>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small name2">Leeroy Jenkins</span>
+                                <img class="img-profile rounded-circle" src="img/leeroy.jpg">
+                            </a>
+
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/leeroy-jenkins-dashboard.html">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400 name3"></i>
+                                    DASHBOARD
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="//github.com/helloshyann/Group8LoanApp" target="_blank">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400 name3"></i>
+                                    GITHUB
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400 name3"></i>
+                                    LOGOUT
+                                </a>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container">
+
+                    <!--ROW 3-->
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary name3">CODE</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                   
+<pre>
+<code class="language-js line-numbers">function calculate() {
+
+//Step 1: Getting the data
+let bal = Number(document.getElementById("balance").value); // Input 1 is total balance input
+let term = Number(document.getElementById("term").value); // Input 2 is the monthly term input
+let rate = Number(document.getElementById("rate").value);  // Input 3 is the interest rate input
+
+//Step 2: Run Collected Data
+// Total Monthly Payment = (amount loaned) * (rate/1200) / (1 – (1 + rate/1200)^(-Number of Months) )
+let totMonPay = (bal) * (rate / 1200) / (1 - Math.pow((1 + rate / 1200), -term));
+let remBal = bal;                      //rem balance = balance after each monthly pay
+let intPay = remBal * rate / 1200;     //Interest Payment = Previous Remaining Balance * rate/1200
+let prinPay = totMonPay - intPay;      // Principal Payment = Total Monthly Payment - Interest Payment
+let totIntPay = 0;                     //Remaining Balance = Previous Remaining Balance - principal payments
+let accuPay = 0;
+
+//Step 3: Result / Outputting to table
+// Base format of the Table
+let template = `<tr>
+    <th>Month</th>
+    <th>Payment</th>
+    <th>Principal</th>
+    <th>Interest</th>
+    <th>Total Interest</th>
+    <th>Balance</th>
+</tr>`;
+
+//Loop will dynamically fill the table based on how many months the interest is
+// i = starting month
+
+for (let i = 1; i <= term; i++) {
+
+totIntPay += intPay;             //total interest will gradually increase as monthly payments are made
+prinPay = totMonPay - intPay;    //Principal will increase since interest amount owed goes down
+remBal = remBal - prinPay;       //Remaining balance will slowly decrease as payments are made
+intPay = remBal * rate / 1200;   //As loop continues, it gradually decreases as more payments are made
+accuPay += totMonPay;
+
+//(Bar Graph) checks for 1st 6 months and pushes principal pay into data entries variable
+if (i <= 6) {                    
+dataEntries.push(accuPay);
+}
+
+//How result will be formatted as loop continues
+template += `<tr>
+    <td>${i}</td>
+    <td>${totMonPay.toFixed(2)}</td>
+    <td>${prinPay.toFixed(2)}</td>
+    <td>${intPay.toFixed(2)}</td>
+    <td>${totIntPay.toFixed(2)}</td>
+    <td>${remBal.toFixed(2)}</td>
+</tr>`
+};
+
+//Puts into HTML
+document.getElementById("result").innerHTML = template;
+document.getElementById("termMon").innerHTML = `${term} months`
+document.getElementById("totBal").innerHTML = `$${bal}`
+document.getElementById("monPay").innerHTML = `$${totMonPay.toFixed(2)}`;
+document.getElementById("intRate").innerHTML = `${rate}%`
+
+prinGraph();
+
+};
+
+</code>
+</pre>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span class="name2">Copyright &copy; <a href="//www.ejdevspot.com/" target="_blank">Jones</a>, <a href="//shyann.netlify.app" target="_blank">Jobe</a>, &amp; <a href="//jackson-hollidays-portfolio.netlify.app/" target="_blank">Jackson</a> 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title name3" id="exampleModalLabel">READY TO LEAVE?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body name3 text-center">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary name2" type="button" data-dismiss="modal">CANCEL</button>
+                    <a class="btn btn-primary name2" href="index.html">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Prism JS-->
+    <script src="js/prism.js"></script>
+
+    <!--Apex Charts Script-->
+    <script src="//cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Custom JS for App -->
+    <script src="/js/MortCalc.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-bar-demo.js"></script>
+</body>
+</html>
