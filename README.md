@@ -1,9 +1,8 @@
-<img src="" width="200">
+<img src="img/logo.png" width="200">
 
-# JONES, JOBE, & JACKSON
-## Personal Loan Lenders
+# Personal Loan Lending Application
 
-The Jones, Jobe, & Jackson lending firm has been financing mortgage, auto, and personal loans since October 15, 2020! When it comes to getting the best rates in the country, JJ&J has you in good hands.
+The Jones, Jobe, & Jackson lending firm has been financing mortgage, auto, and personal loans since October 15, 2020! When it comes to getting the best rates in the country, JJJ has you in good hands.
 
 ## How It Works
 
@@ -12,10 +11,11 @@ This program has been designed to allow a user to calculate loan estimations. Us
 ## Credits
 
 Credits to Adam Ericsson from dafont.com from providing the fonts in this application: 'Adam-Light’, 'Adam-Medium', and 'Adam-Bold'.
+
 Credits to ApexCharts for the dynamic javascript library.
 
 ## See This Website
 
 [JONES, JOBE, & JACKSON | Loan Calculator](https://jonesjobejackson.netlify.app)
 
-© Shyann Jobe 2020
+© Jones, Jobe, & Jackson 2020
